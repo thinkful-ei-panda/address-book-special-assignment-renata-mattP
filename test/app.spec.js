@@ -62,13 +62,14 @@ describe('App', () => {
 		return supertest(app).get('/').expect(200, `Hello, world!`)
 	})
 
-	it(`GET /address responds with 200 containg an array of addresses, without bearer token validation`, () => {
+	it(`GET /address responds with 200 containg an array of addresses, without bearer token validation, archived is set to false`, () => {
 		return supertest(app)
 			.get('/address')
 			.expect(200)
 			.expect('Content-Type', /json/)
 			.then((res) => {
 				expect(res.body).to.be.an('array')
+				expect(res.body[0].archived).to.be.false
 			})
 	})
 
