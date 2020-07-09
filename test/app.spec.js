@@ -132,9 +132,23 @@ describe('App', () => {
 				.expect(200)
 				.expect('Content-Type', /json/)
 				.then((res) => {
-					expect(res.body)
-						.to.be.an('object')
-						.to.include.all.keys('message', 'deletedItem')
+					expect(res.body).to.eql({
+						message: 'deleted!',
+						deletedItem: [
+							{
+								id:
+									'cb9753b4-feb4-4812-9688-70e939f184e4',
+								firstName: 'Bob',
+								lastName: 'Drifter',
+								address1: '123 Main',
+								address2: '',
+								city: 'Dallas',
+								state: 'TX',
+								zip: 12345,
+								archived: true,
+							},
+						],
+					})
 				})
 		})
 	})
