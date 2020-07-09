@@ -117,14 +117,6 @@ describe('App', () => {
 	describe('DELETE', () => {
 		it('DELETE /address should return 200 and set "archived" on deleted address', () => {
 			const id = 'cb9753b4-feb4-4812-9688-70e939f184e4'
-			const index = ADDRESSES.findIndex(
-				(address) => address.id === id
-			)
-			ADDRESSES[index].archived = true
-			const currentAddress = ADDRESSES.filter(
-				(address) => address.id === id
-			)
-			const archived = 'archived'
 
 			return supertest(app)
 				.delete(`/address/${id}`)
