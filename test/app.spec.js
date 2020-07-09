@@ -21,41 +21,6 @@ const invalidUser = {
 	state: 'TX',
 	zip: '12345',
 }
-let ADDRESSES = [
-	{
-		id: 'cb9753b4-feb4-4812-9688-70e939f184e3',
-		firstName: 'person',
-		lastName: 'lastname',
-		address1: '153 Avenue avenue',
-		address2: 'apt 5',
-		city: 'Dallas',
-		state: 'TX',
-		zip: 12345,
-		archived: false,
-	},
-	{
-		id: 'cb9753b4-feb4-4812-9688-70e939f184e4',
-		firstName: 'Bob',
-		lastName: 'Drifter',
-		address1: '123 Main',
-		address2: '',
-		city: 'Dallas',
-		state: 'TX',
-		zip: 12345,
-		archived: false,
-	},
-	{
-		id: 'cb9753b4-feb4-4812-9688-70e939f184e5',
-		firstName: 'Mary',
-		lastName: 'Sullivan',
-		address1: '152 Mulbery St',
-		address2: '',
-		city: 'Houston',
-		state: 'TX',
-		zip: 12347,
-		archived: false,
-	},
-]
 
 describe('App', () => {
 	it(`GET / responds with 200 containg "Hello, world!"`, () => {
